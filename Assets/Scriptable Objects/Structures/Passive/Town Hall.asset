@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36db96c9db3f6ba4eb3530cb5c55f773, type: 3}
+  m_Name: Town Hall
+  m_EditorClassIdentifier: 
+  structureHealth: 1000
+  structureCostWood: 15
+  structureCostStone: 10
+  structureCostIron: 0
+  structureDamage: 0
+  structureArmor: 0
+  structureDetectionRange: 0
+  damageToMaterial: 0
+  giveMaterial: 0
+  cooldownTime: 0
