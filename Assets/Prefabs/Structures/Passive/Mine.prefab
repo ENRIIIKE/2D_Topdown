@@ -116,7 +116,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 64
-  textWhenMined: ' Iron'
+  fontSize: 0.7
 --- !u!1 &4681782583793632001
 GameObject:
   m_ObjectHideFlags: 0

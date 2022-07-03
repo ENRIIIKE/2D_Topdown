@@ -10,7 +10,7 @@ public class MineStructure : MonoBehaviour
     private int damage;
     private int giveMaterial;
 
-    public string textWhenMined;
+    public float fontSize;
 
     void Start()
     {
@@ -40,7 +40,8 @@ public class MineStructure : MonoBehaviour
         miningObject.GetComponent<MaterialScript>().DamageToMaterial(damage);
 
         PlayerInventory.Instance.GiveMaterial(giveMaterial, 3);
+        string textWhenMined = "+" + giveMaterial + " " + miningObject.name;
 
-        UniversalUtilities.InstantiateText(transform.position, textWhenMined, true, giveMaterial, 1f, Color.white);
+        UniversalUtilities.InstantiateText(transform.position, textWhenMined, fontSize, Color.white);
     }
 }

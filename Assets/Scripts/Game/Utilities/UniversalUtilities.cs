@@ -6,10 +6,7 @@ namespace enrike.utils.text
 {
     public class UniversalUtilities : MonoBehaviour
     {
-        /*NOW YOU ARE NOT ABLE TO CHANGE COLOR OF THE TEXT, MAKE IT 
-         */
-
-        public static GameObject InstantiateText(Vector3 position, string importText, bool materialPerTime, int giveMaterial, float fontSize, Color32 textColor)
+        public static GameObject InstantiateText(Vector3 position, string importText, float fontSize, Color32 textColor)
         {
             GameObject textPrefab = new GameObject();
 
@@ -36,14 +33,7 @@ namespace enrike.utils.text
             textComponent.verticalAlignment = VerticalAlignmentOptions.Middle;
             textComponent.horizontalAlignment = HorizontalAlignmentOptions.Center;
 
-            if (materialPerTime)
-            {
-                textComponent.text = "+" + giveMaterial + importText;
-            }
-            else
-            {
-                textComponent.text = importText;
-            }
+            textComponent.text = importText;
 
             textRect.sizeDelta = new Vector2(textComponent.preferredWidth, textComponent.preferredHeight);
 

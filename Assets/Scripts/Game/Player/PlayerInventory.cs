@@ -141,7 +141,7 @@ public class PlayerInventory : MonoBehaviour
                 return false;
             }
 
-            GameObject textInstance = UniversalUtilities.InstantiateText(transform.position, notEnoughMaterialsText, false, 0, fontSize, Color.red);
+            GameObject textInstance = UniversalUtilities.InstantiateText(transform.position, notEnoughMaterialsText, fontSize, Color.red);
             textInstance.name = "Low Materials";
             
 
