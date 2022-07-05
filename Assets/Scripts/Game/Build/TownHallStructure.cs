@@ -10,9 +10,4 @@ public class TownHallStructure : MonoBehaviour
         GameManager.Instance.DisableTownHallBuild();
         StructureManager.Instance.DeselectStructure();
     }
-
-    void Update()
-    {
-        
-    }
 }

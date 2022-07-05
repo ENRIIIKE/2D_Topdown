@@ -8,10 +8,12 @@ public class PlayerInteraction : MonoBehaviour
     public float delaySeconds;
 
     [Header("Axe Tool")]
+    public Animator axeAnimator;
     public bool axeReadyToUse = true;
     public bool axeSelected = false;
 
     [Header("Build Tool")]
+    public Animator buildAnimator;
     public bool buildReadyToUse = true;
     public bool buildSelected = false;
 
@@ -36,12 +38,14 @@ public class PlayerInteraction : MonoBehaviour
 
                     axeReadyToUse = false;
                     ableToSwitch = false;
+                    axeAnimator.Play("Attack");
                     break;
                 case PlayerState.Build:
                     if (!buildReadyToUse) return;
 
                     buildReadyToUse = false;
                     ableToSwitch = false;
+                    buildAnimator.Play("Build_Use");
                     break;
             }
         }

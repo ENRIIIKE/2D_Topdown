@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
     public Transform structureBar;
     public GameObject townHallPanel;
 
+
     private void Start()
     {
         SetStructureButtons(false);
@@ -58,4 +59,5 @@ public class GameManager : MonoBehaviour
     {
         townHallPanel.GetComponentInChildren<Button>().interactable = false;
     }
+
 }
