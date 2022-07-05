@@ -7708,8 +7708,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e5e4da331efb4d478c7fd15b7b685f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wood: 50
-  stone: 50
+  wood: 250
+  stone: 250
   iron: 0
   woodText: {fileID: 186919304}
   stoneText: {fileID: 801065809}
