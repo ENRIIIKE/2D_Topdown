@@ -4341,6 +4341,93 @@ Transform:
   m_Father: {fileID: 1420683507}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1048959646
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1048959647}
+  - component: {fileID: 1048959648}
+  m_Layer: 0
+  m_Name: A* Pathfinding
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1048959647
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048959646}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1560767464}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1048959648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048959646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78396926cbbfc4ac3b48fc5fc34a87d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  data:
+    dataString: UEsDBBQAAAgIAAAIIeypauyGdQIAADIFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVF1zojAU/StOnlcHFLDs2y61dh/aOnV3+sJLhItkDAmThKrt+N/3JoBQ64vh3I+cc+6FT8KEriEzUq0Vy59kDuTnhNgz+TEZgo9wonsptuwD+pw3lpvSJlGX80oNk4j7tkzLCoxi2S+x5zbZQ7ARrJCqWuV7SKQ2GuGCcg0YUtLYaoHQ54Sc8G8a25IznuZLe/rAU+xNLnjMQBhQQ2qfGM7mwdwPV1Nv2RXczeLAi+KlhVxpIzJOqxpyq2PoEARdiyCYefa3uHPpApV2mVZVJjlnuqNJzLl2NiS01g2KxIScUZTtuHmzOwRKYPvSWBHj8pei0GA65oqe75lC/9q+5LdsTa2oPrQM3ylvHIV47li1TZ++xae+CxdKVo/9vb5n7zAlyw6v9JxRbUauj+H7gbrvjDpSfqA7Dm8liGe5VrIROQaNamxpo2F+PzxepSUlZIcBb6negE39fXb9iK2Gi1N/Sjirds7JoAW2XDrH3WaAwtn8QcJub3TXAlHL4p+Gv3Q/XrAu8MCUNhjqVApLbycbZVPJynlm1TQmkUqAgzvSNQjKzXmDbcztCG9io2tvIg/Uvkrd5V2sf0NuShw85HveTWgjj9dh6VIen0CXL43hTMBA2gae0adECtFu2NiTvmzbqIJmo7J9w/Kvq0VCiMIg8qBYRMtwEUbTMCiiKI79RTZfZH4QELd7TKBOyjct0c4enNrYE4GL1n9iJmtFa7fuuaLHNfuo5MhzJgq5zRSAePnaQoPCW/DFzFc5Q4e2YAwTbuDkMyVcZgfI02uj1EldnYyi6dAlJTV7l8YiKUncNyUlFr4u80bBO4OjvbxvdiGX/1BLAwQUAAAICAAACCHsvaSnvW0AAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNdRUEovSizIKAaKGII4pZkpIHa0kmmqmamJmUFqmrGZuamxqZmuqUmamZmlpaFxspFxsqGJiVIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAACCHsqWrshnUCAAAyBQAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAACCHsvaSnvW0AAAB4AAAACQAkAAAAAAAAAAAAAADCAgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAHoDAAAAAA==
+    upgradeData: 
+    file_cachedStartup: {fileID: 0}
+    data_cachedStartup: 
+    cacheStartup: 0
+  showNavGraphs: 0
+  showUnwalkableNodes: 1
+  debugMode: 0
+  debugFloor: 0
+  debugRoof: 1
+  manualDebugFloorRoof: 0
+  showSearchTree: 0
+  unwalkableNodeDebugSize: 0.3
+  logPathResults: 1
+  maxNearestNodeDistance: 100
+  scanOnStartup: 1
+  fullGetNearestSearch: 0
+  prioritizeGraphs: 0
+  prioritizeGraphsLimit: 1
+  colorSettings:
+    _SolidColor: {r: 0.11764706, g: 0.4, b: 0.7882353, a: 0.9}
+    _UnwalkableNode: {r: 1, g: 0, b: 0, a: 0.5}
+    _BoundsHandles: {r: 0.29, g: 0.454, b: 0.741, a: 0.9}
+    _ConnectionLowLerp: {r: 0, g: 1, b: 0, a: 0.5}
+    _ConnectionHighLerp: {r: 1, g: 0, b: 0, a: 0.5}
+    _MeshEdgeColor: {r: 0, g: 0, b: 0, a: 0.5}
+    _AreaColors:
+    - {r: 0, g: 0, b: 0, a: 0}
+  tagNames: []
+  heuristic: 2
+  heuristicScale: 1
+  threadCount: 1
+  maxFrameTime: 1
+  batchGraphUpdates: 0
+  graphUpdateBatchingInterval: 0.2
+  euclideanEmbedding:
+    mode: 0
+    seed: 0
+    pivotPointRoot: {fileID: 0}
+    spreadOutCount: 1
+  showGraphs: 1
 --- !u!1 &1070107060
 GameObject:
   m_ObjectHideFlags: 0
@@ -6292,6 +6379,7 @@ Transform:
   - {fileID: 65511713}
   - {fileID: 1525444089}
   - {fileID: 1222826122}
+  - {fileID: 1048959647}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
