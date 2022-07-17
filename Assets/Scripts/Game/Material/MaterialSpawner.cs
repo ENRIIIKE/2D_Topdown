@@ -64,6 +64,7 @@ public class MaterialSpawner : MonoBehaviour
             }
             materialIndex++;
         }
+        GameManager.Instance.RecalculateGraph();
     }
     public void DeleteAllSpawnedMaterials()
     {

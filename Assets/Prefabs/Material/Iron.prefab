@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 2850687426142947531}
   - component: {fileID: 2850687426142947524}
   - component: {fileID: 2850687426142947525}
-  - component: {fileID: 2850687426142947530}
+  - component: {fileID: 4945380012753327278}
   - component: {fileID: 7746333422280280083}
-  - component: {fileID: 3802575082457204758}
   m_Layer: 6
   m_Name: Iron
   m_TagString: Untagged
@@ -197,8 +196,8 @@ MonoBehaviour:
   m_EnableTangents: 0
   m_GeometryCached: 0
   m_UTess2D: 0
---- !u!60 &2850687426142947530
-PolygonCollider2D:
+--- !u!58 &4945380012753327278
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -210,39 +209,9 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.97840506, y: -0.53441834}
-      - {x: -1.2847956, y: -0.10718165}
-      - {x: -1.3510916, y: 0.15133122}
-      - {x: -1.2646735, y: 0.4340005}
-      - {x: -1.0233296, y: 0.66488636}
-      - {x: -0.50923836, y: 0.9502841}
-      - {x: -0.20238009, y: 1.047865}
-      - {x: 0.050322622, y: 1.0561727}
-      - {x: 0.93383497, y: 0.77949286}
-      - {x: 1.1730094, y: 0.649063}
-      - {x: 1.3002182, y: 0.5013494}
-      - {x: 1.4147656, y: 0.15593028}
-      - {x: 1.4304374, y: -0.15185474}
-      - {x: 1.353082, y: -0.41784984}
-      - {x: 0.97120464, y: -0.69014263}
-      - {x: 0.5019273, y: -0.8631931}
-      - {x: -0.09015655, y: -0.90756154}
-      - {x: -0.47395945, y: -0.8594039}
-      - {x: -0.7758007, y: -0.7238105}
-      - {x: -0.9141988, y: -0.60719305}
-      - {x: -0.97840506, y: -0.53441834}
+  m_Offset: {x: 0.0410217, y: 0.07647907}
+  serializedVersion: 2
+  m_Radius: 1.5926061
 --- !u!114 &7746333422280280083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,22 +227,6 @@ MonoBehaviour:
   materialSO: {fileID: 11400000, guid: a37ea9050d661a748a8b87e51369361f, type: 2}
   particles: {fileID: 8810588336999245878, guid: 033a7026dbfbc4242808f10cbe418329, type: 3}
   materialIndex: 3
---- !u!208 &3802575082457204758
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2850687426142947528}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 1.593, y: 1.1860001, z: 0.00001}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0.041, y: 0.076000005, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &4572320976774496277
 GameObject:
   m_ObjectHideFlags: 0

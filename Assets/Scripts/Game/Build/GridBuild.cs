@@ -110,6 +110,7 @@ public class GridBuild : MonoBehaviour
         GameObject buildedStructure = Instantiate(selectedBuilding, centerCellPosition, Quaternion.identity, structureParent);
         StructureManager.Instance.AddStructure(buildedStructure);
         buildedStructure.GetComponent<Structure>().preview = false;
+        buildedStructure.name = selectedBuilding.name;
 
         //Instantiate particle to show that selected grid is available and structure will be build
         GameObject particleStructure = Instantiate(structureBuildingPS, centerCellPosition, Quaternion.identity, particleParent.transform);
@@ -118,7 +119,8 @@ public class GridBuild : MonoBehaviour
         main.startColor = green;
         float durationPS = particleSystem.main.duration;
         Destroy(particleStructure, durationPS + 10f);
-        
+
+        GameManager.Instance.RecalculateGraph();
         numberOfBuildings++;
     }
 

@@ -51,6 +51,8 @@ public class MaterialScript : MonoBehaviour, IDamageToMaterial
     {
         if (Health <= 0)
         {
+            GetComponent<CircleCollider2D>().enabled = false;
+            GameManager.Instance.RecalculateGraph();
             Destroy(gameObject, 0.1f);
 
             GameObject particle = Instantiate(particles, transform.position, Quaternion.identity, particlesParent);

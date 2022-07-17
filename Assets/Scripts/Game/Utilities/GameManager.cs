@@ -60,4 +60,9 @@ public class GameManager : MonoBehaviour
         townHallPanel.GetComponentInChildren<Button>().interactable = false;
     }
 
+    public void RecalculateGraph()
+    {
+        var graphToScan = AstarPath.active.data.gridGraph;
+        AstarPath.active.Scan(graphToScan);
+    }
 }
