@@ -1,4 +1,5 @@
 using UnityEngine;
+using enrike.utils.text;
 
 public class Structure : MonoBehaviour, IDamageToFriendly
 {
@@ -61,7 +62,7 @@ public class Structure : MonoBehaviour, IDamageToFriendly
 
         EnableStructureFunction();
     }
-    public void DamageToFriendly(int damage)
+    public void Damage(int damage)
     {
         if (damage > StructureHealth)
         {
@@ -72,6 +73,7 @@ public class Structure : MonoBehaviour, IDamageToFriendly
         {
             StructureHealth -= damage;
         }
+        UniversalUtilities.InstantiateText(transform.position, damage.ToString(), 1f, Color.red);
     }
     private void EnableStructureFunction()
     {

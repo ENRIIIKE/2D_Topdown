@@ -28,7 +28,7 @@ public class ToolScript : MonoBehaviour
         foreach(Collider2D collider in colliders)
         {
             IDamageToMaterial damageable = collider.GetComponentInParent<IDamageToMaterial>();
-            damageable.DamageToMaterial(toolDamage);
+            damageable.Damage(toolDamage);
         }
     }
 

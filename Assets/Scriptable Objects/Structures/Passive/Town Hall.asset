@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Town Hall
   m_EditorClassIdentifier: 
   structureHealth: 1000
-  structureCostWood: 15
-  structureCostStone: 10
+  structureCostWood: 40
+  structureCostStone: 25
   structureCostIron: 0
   structureDamage: 0
   structureArmor: 0

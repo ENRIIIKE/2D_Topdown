@@ -1,4 +1,4 @@
 public interface IDamageToFriendly
 {
-    void DamageToFriendly(int damage);
+    void Damage(int damage);
 }

@@ -1,4 +1,4 @@
 public interface IDamageToMaterial
 {
-    void DamageToMaterial(int damage);
+    void Damage(int damage);
 }

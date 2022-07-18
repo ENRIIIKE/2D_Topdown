@@ -15,6 +15,7 @@ public class EnemySpawner : MonoBehaviour
     private int spawnedEnemies;
 
     private float outOfPlayerRange;
+
     void Start()
     {
         spawnTime = Time.time + spawnDelay;
@@ -46,7 +47,8 @@ public class EnemySpawner : MonoBehaviour
 
         if (spawnedEnemies <= enemyAmount)
         {
-            Instantiate(enemyPrefabs[0], randomPos, Quaternion.identity);
+            GameObject enemy = Instantiate(enemyPrefabs[0], randomPos, Quaternion.identity);
+            enemy.name = enemyPrefabs[0].name + " " + spawnedEnemies;
 
             spawnedEnemies++;
         }

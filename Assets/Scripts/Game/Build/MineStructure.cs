@@ -37,7 +37,7 @@ public class MineStructure : MonoBehaviour
     {
         nextMineTime = Time.time + cooldownTime;
 
-        miningObject.GetComponent<MaterialScript>().DamageToMaterial(damage);
+        miningObject.GetComponent<MaterialScript>().Damage(damage);
 
         PlayerInventory.Instance.GiveMaterial(giveMaterial, 3);
         string textWhenMined = "+" + giveMaterial + " " + miningObject.name;

@@ -26,7 +26,7 @@ public class MaterialScript : MonoBehaviour, IDamageToMaterial
     }
 
     //Damage to material with axe
-    public void DamageToMaterial(int damage)
+    public void Damage(int damage)
     {
         if (damage > Health)
         {
