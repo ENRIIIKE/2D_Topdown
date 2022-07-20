@@ -11,7 +11,7 @@ public class Structure : MonoBehaviour, IDamageToFriendly
         get { return structureHealth; }
         set { structureHealth = value; }
     }
-
+    
     #region StructureCost
     //Structure Cost
     private int structureMaterialCostWood;
@@ -73,7 +73,7 @@ public class Structure : MonoBehaviour, IDamageToFriendly
         {
             StructureHealth -= damage;
         }
-        UniversalUtilities.InstantiateText(transform.position, damage.ToString(), 1f, Color.red);
+        CheckHealth();
     }
     private void EnableStructureFunction()
     {
@@ -99,6 +99,13 @@ public class Structure : MonoBehaviour, IDamageToFriendly
         else if (townHallStructure != null)
         {
             townHallStructure.enabled = true;
+        }
+    }
+    private void CheckHealth()
+    {
+        if (StructureHealth <= 0)
+        {
+            Destroy(gameObject);
         }
     }
 }

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36db96c9db3f6ba4eb3530cb5c55f773, type: 3}
   m_Name: Town Hall
   m_EditorClassIdentifier: 
-  structureHealth: 1000
+  structureHealth: 500
   structureCostWood: 40
   structureCostStone: 25
   structureCostIron: 0

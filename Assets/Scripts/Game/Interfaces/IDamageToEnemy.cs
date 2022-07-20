@@ -1,4 +1,4 @@
 public interface IDamageToEnemy
 {
-    void Damage(int damage);
+    void GetDamage(int damage);
 }

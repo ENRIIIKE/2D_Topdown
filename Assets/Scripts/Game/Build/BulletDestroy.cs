@@ -31,7 +31,7 @@ public class BulletDestroy : MonoBehaviour
 
         if (damageToEnemy != null)
         {
-            damageToEnemy.Damage(turretScript.TurretDamage);
+            damageToEnemy.GetDamage(turretScript.TurretDamage);
         }
     }
 }
