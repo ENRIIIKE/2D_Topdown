@@ -98,9 +98,10 @@ GameObject:
   - component: {fileID: 3888133941319944519}
   - component: {fileID: -8797342680636192275}
   - component: {fileID: -5576544184843489205}
-  - component: {fileID: 7143092326019313966}
+  - component: {fileID: 167656220951311720}
+  - component: {fileID: 4322500463203131859}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Ranger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -164,7 +165,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.4716981, g: 0.1713243, b: 0.1713243, a: 1}
+  m_Color: {r: 0.17254905, g: 0.26890865, b: 0.47058824, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -274,7 +275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   target: {fileID: 0}
---- !u!114 &7143092326019313966
+--- !u!114 &167656220951311720
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -283,12 +284,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 9114329385146242725}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74c85e0b1cf7c57428f0faf75fb181f2, type: 3}
+  m_Script: {fileID: 11500000, guid: 77f586f285b3847808d79083bd19ef1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  version: 1
+  unwrap: 1
+  splitAtEveryPortal: 0
+--- !u!114 &4322500463203131859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9114329385146242725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4511c0c99e701d14e9d476bc95ea8204, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1
+  enemyName: Ranger
+  health: 40
+  speed: 2.5
+  rangeToAttack: 5
+  targetInRange: 0
+  isDead: 0
+  target: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 640
-  rangeToAttack: 1
-  damage: 5
-  nextAttack: 2
+  attackTime: 0
+  attackCooldown: 3

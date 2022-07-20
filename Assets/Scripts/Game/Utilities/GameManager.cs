@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     public Transform structureBar;
     public GameObject townHallPanel;
 
-
+    public int enemiesDefeated;
     private void Start()
     {
         SetStructureButtons(false);

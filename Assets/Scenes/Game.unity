@@ -3832,6 +3832,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   structureBar: {fileID: 696824370}
   townHallPanel: {fileID: 934254668}
+  enemiesDefeated: 0
 --- !u!4 &815347222
 Transform:
   m_ObjectHideFlags: 0
@@ -5136,6 +5137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefabs:
   - {fileID: 9114329385146242725, guid: c2d8fd8cef66287418cbb37975172dc4, type: 3}
+  - {fileID: 9114329385146242725, guid: 22ff4e3950b2eeb4db3a39a1d91597b2, type: 3}
   ground: {fileID: 1487231323}
   layerMask:
     serializedVersion: 2

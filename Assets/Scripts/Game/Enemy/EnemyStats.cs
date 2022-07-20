@@ -12,30 +12,36 @@ public abstract class EnemyStats : MonoBehaviour, IDamageToEnemy
     public int health;
     public float speed;
     public float rangeToAttack;
-
-    [Space]
-    public Animator animator;
-    public float destroyAfter;
+    public bool targetInRange;
+    public bool isDead;
 
     //Target
     [Space]
     public GameObject target;
     public LayerMask layerMask;
 
+    //Attack
+    [Space]
+    public float attackTime;
+    public float attackCooldown;
+
     //AI
     private AIDestinationSetter aiDestinationSetter;
     private AIPath aiPath;
 
-    public void SetVariables(GameObject gameObject)
+    public void SetVariables()
     {
-        thisObject = gameObject.GetComponent<GameObject>();
+        thisObject = gameObject;
         aiDestinationSetter = thisObject.GetComponent<AIDestinationSetter>();
         aiPath = thisObject.GetComponent<AIPath>();
+
+
+        aiPath.maxSpeed = speed;
     }
     public abstract void Attack();
     public void Destroy()
     {
-        Destroy(thisObject, destroyAfter);
+        Destroy(thisObject, 0.1f);
     }
     public void CheckTargetPriority()
     {
@@ -61,19 +67,30 @@ public abstract class EnemyStats : MonoBehaviour, IDamageToEnemy
         {
             health -= damage;
         }
+        CheckHealth();
     }
     public void CheckInRangeTarget()
     {
         Collider2D collider = Physics2D.OverlapCircle(transform.position, rangeToAttack, layerMask);
         if (collider != null)
         {
+            targetInRange = true;
             aiPath.canMove = false;
             return;
         }
         else
         {
+            targetInRange = false;
             aiPath.canMove = true;
             return;
+        }
+    }
+    private void CheckHealth()
+    {
+        if (health <= 0)
+        {
+            Destroy();
+            GameManager.Instance.enemiesDefeated++;
         }
     }
 }

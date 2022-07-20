@@ -44,11 +44,11 @@ public class EnemySpawner : MonoBehaviour
             spawnTime = Time.time;
             return;
         }
-
+        int index = Random.Range(0, enemyPrefabs.Length); ;
         if (spawnedEnemies <= enemyAmount)
         {
-            GameObject enemy = Instantiate(enemyPrefabs[0], randomPos, Quaternion.identity);
-            enemy.name = enemyPrefabs[0].name + " " + spawnedEnemies;
+            GameObject enemy = Instantiate(enemyPrefabs[index], randomPos, Quaternion.identity);
+            enemy.name = enemyPrefabs[index].name;
 
             spawnedEnemies++;
         }
