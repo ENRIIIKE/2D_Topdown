@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Turret
   m_EditorClassIdentifier: 
   structureHealth: 250
-  structureCostWood: 45
-  structureCostStone: 40
-  structureCostIron: 20
+  structureCostWood: 15
+  structureCostStone: 20
+  structureCostIron: 5
   structureDamage: 10
   structureArmor: 0
   structureDetectionRange: 6

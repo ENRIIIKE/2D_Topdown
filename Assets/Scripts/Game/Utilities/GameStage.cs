@@ -1,9 +1,11 @@
+using System;
 using UnityEngine;
 using TMPro;
 
 public class GameStage : MonoBehaviour
 {
-    public TextMeshProUGUI text;
+    public TextMeshProUGUI stageText;
+    public TextMeshProUGUI timerText;
     public EnemySpawner spawner;
 
     [Space]
@@ -17,6 +19,8 @@ public class GameStage : MonoBehaviour
 
     [Space]
     //Enemy Attacking
+    private float timer;
+    private float showTime;
     private float timeOfAttack;
     public float lengthOfAttack;
     public bool enemyAttacking;
@@ -30,16 +34,31 @@ public class GameStage : MonoBehaviour
     void Start()
     {
         nextStage = stageLenght;
-        text.text = currentStage.ToString();
+        stageText.text = currentStage.ToString();
 
         timeOfAttack = nextStage - lengthOfAttack;
         solidStageChange = nextStageChange;
-    }
 
+        timer = stageLenght - lengthOfAttack;
+    }
     void Update()
     {
         time = Time.time;
         time = Mathf.Round(time * 10.0f) / 10.0f;
+
+        if (timer > 0)
+        {
+            timer -= Time.deltaTime;
+            showTime = Mathf.FloorToInt(timer + 1);
+        }
+        else
+        {
+            timer = 0f;
+        }
+
+
+        timerText.text = showTime.ToString();
+
 
         if (time >= nextStage)
         {
@@ -55,7 +74,7 @@ public class GameStage : MonoBehaviour
     private void AddDay()
     {
         currentStage++;
-        text.text = currentStage.ToString();
+        stageText.text = currentStage.ToString();
         nextStage += stageLenght;
 
 
@@ -69,6 +88,7 @@ public class GameStage : MonoBehaviour
             nextStageChange += solidStageChange;
             addEnemy++;
         }
+        timer = lengthOfAttack;
     }
     private void EnableEnemySpawning()
     {
